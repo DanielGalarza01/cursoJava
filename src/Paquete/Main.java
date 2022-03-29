@@ -13,7 +13,7 @@ public class Main {
 		do {
 			agenda.agregarCliente(sc);
 			System.out.println("Desea seguir cargando clientes? 'si' o 'no'");
-			ok = sc.next();
+			ok = sc.nextLine();
 		}while(ok.toLowerCase().equals("si"));
 		
 		sc.close();
