@@ -1,10 +1,12 @@
 package Paquete;
 import java.util.Scanner;
-
 import Agenda.Agenda;
+
+
 public class Main {
 	
 	public static void main(String[] args) {
+		
 		Scanner sc = new Scanner(System.in);
 		Agenda agenda = new Agenda();
 		String ok;
@@ -12,16 +14,12 @@ public class Main {
 			agenda.agregarCliente();
 			System.out.println("Desea seguir cargando clientes? 'si' o 'no'");
 			ok = sc.next();
-		}while(ok.equals("si"));
-			
+		}while(ok.toLowerCase().equals("si"));
 		
-		agenda.mostarLista();
+		sc.close();
 		
-		
-		
-		
-				
-		
+		System.out.println("\nLista de clientes:\n");
+		agenda.mostarLista();		
 	}
 
 }
