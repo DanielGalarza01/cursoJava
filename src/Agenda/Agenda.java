@@ -1,7 +1,6 @@
 package Agenda;
 import java.util.ArrayList;
 import java.util.Scanner;
-
 import Persona.Persona;
 
 public class Agenda {
@@ -10,9 +9,9 @@ public class Agenda {
 	public Agenda() {
 		clientes = new ArrayList<>();
 	}
-	
+	Scanner sc = new Scanner(System.in);
 	public void agregarCliente() {
-		Scanner sc = new Scanner(System.in);
+		
 		System.out.println("Ingrese el nombre: ");
 		String nombre = sc.nextLine();
 		System.out.println("Ingrese el apellido: ");
@@ -22,12 +21,15 @@ public class Agenda {
 		Persona nuevo= new Persona(nombre, apellido, edad);		
 		clientes.add(nuevo);
 	}
+	
 	 public void mostarLista() {
 		for (int i=0; i< clientes.size(); i++) {
 			System.out.println(clientes.get(i).getNombre()+" "+clientes.get(i).getApellido()+" "+clientes.get(i).getEdad());
 		}
 	 }
-
+	 public void cerrar() {
+		 sc.close();
+	 }
 	
 }
 ;

@@ -19,7 +19,8 @@ public class Main {
 		sc.close();
 		
 		System.out.println("\nLista de clientes:\n");
-		agenda.mostarLista();		
+		agenda.mostarLista();
+		agenda.cerrar();
 	}
 
 }
