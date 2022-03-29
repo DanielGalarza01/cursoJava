@@ -11,7 +11,7 @@ public class Main {
 		Agenda agenda = new Agenda();
 		String ok;
 		do {
-			agenda.agregarCliente();
+			agenda.agregarCliente(sc);
 			System.out.println("Desea seguir cargando clientes? 'si' o 'no'");
 			ok = sc.next();
 		}while(ok.toLowerCase().equals("si"));
@@ -20,7 +20,7 @@ public class Main {
 		
 		System.out.println("\nLista de clientes:\n");
 		agenda.mostarLista();
-		agenda.cerrar();
+		
 	}
 
 }

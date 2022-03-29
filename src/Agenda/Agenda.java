@@ -9,8 +9,8 @@ public class Agenda {
 	public Agenda() {
 		clientes = new ArrayList<>();
 	}
-	Scanner sc = new Scanner(System.in);
-	public void agregarCliente() {
+	
+	public void agregarCliente(Scanner sc) {
 		
 		System.out.println("Ingrese el nombre: ");
 		String nombre = sc.nextLine();
@@ -27,9 +27,7 @@ public class Agenda {
 			System.out.println(clientes.get(i).getNombre()+" "+clientes.get(i).getApellido()+" "+clientes.get(i).getEdad());
 		}
 	 }
-	 public void cerrar() {
-		 sc.close();
-	 }
+	
 	
 }
 ;
